@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEE SSIT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body id="jo" class="">
+
+    <!-- Background & animion & navbar & title -->
+
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link">
+                <div class="navbar-logo"></div>
+                Website Name
+            </a>
+            <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+            <div id="navbar-menu" class="detached">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const navbar = document.getElementById("navbar");
+        const navbarToggle = navbar.querySelector(".navbar-toggle");
+
+        function openMobileNavbar() {
+            navbar.classList.add("opened");
+            navbarToggle.setAttribute("aria-expanded", "true");
+        }
+
+        function closeMobileNavbar() {
+            navbar.classList.remove("opened");
+            navbarToggle.setAttribute("aria-expanded", "false");
+        }
+
+        navbarToggle.addEventListener("click", () => {
+            if (navbar.classList.contains("opened")) {
+                closeMobileNavbar();
+            } else {
+                openMobileNavbar();
+            }
+        });
+
+        const navbarMenu = navbar.querySelector("#navbar-menu");
+        const navbarLinksContainer = navbar.querySelector(".navbar-links");
+
+        navbarLinksContainer.addEventListener("click", (clickEvent) => {
+            clickEvent.stopPropagation();
+        });
+
+        navbarMenu.addEventListener("click", closeMobileNavbar);
+
+        document
+            .getElementById("options")
+            .querySelectorAll("input[name='navtype']")
+            .forEach((option) => {
+                option.addEventListener("change", (e) => {
+                    const navType = e.target.id.split("-").join(" ");
+                    navbarMenu.classList = navType;
+                });
+            });
+    </script>
+    </main>
+    <section class="h-screen bg-cover bg-center " style="background-image: url( './images/back.jpg'); ">
+        <div class="container mx-auto h-full flex items-center justify-center ">
+            <div class="text-center ">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 ">OUR BRAND NEW CLUB BLAH BALH!!!</h1>
+                <p class="text-lg md:text-xl text-white mb-8 ">Your subheading here WRITE SOMETHING IDK</p>
+                <a href="https://forms.office.com/r/YJJkAC19zh " class="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-300 transition duration-300 ">REGISTER NOW</a>
+            </div>
+        </div>
+    </section>
+    < <div id="proj" class="flex flex-wrap justify-center">
+        <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
+            <div class="text-center">
+                <p class="text-gray-600 text-lg font-medium mb-2">Projects Completed</p>
+                <p class="text-3xl font-bold text-green-500">30</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
+            <div class="text-center">
+                <p class="text-gray-600 text-lg font-medium mb-2">Projects Doing</p>
+                <p class="text-3xl font-bold text-blue-500">15</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
+            <div class="text-center">
+                <p class="text-gray-600 text-lg font-medium mb-2">Projects Funded</p>
+                <p class="text-3xl font-bold text-yellow-500">50</p>
+            </div>
+        </div>
+        </div>
+        <div class="container mx-auto py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">My Projects</h2>
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+                    <img class="w-full h-64 object-cover" src="./images/lifi.jpeg" alt="Project 1">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">PROJECT LIFI</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+                    <img class="w-full h-64 object-cover" src="project2.jpg" alt="Project 2">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Project 2</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+                    <img class="w-full h-64 object-cover" src="project3.jpg" alt="Project 3">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Project 3</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-6">
+                    <img src="./images/inaug.jpeg" alt=" Inauguration Image 600x400 " class="rounded-lg shadow-lg ">
+                </div>
+                <div class="w-full lg:w-1/2 ">
+                    <h2 class="text-3xl font-bold mb-4 ">Our Inauguration</h2>
+                    <p class="mb-6 ">The IEEE SSIT Club was inaugurated on [insert date] with Deepa Mam and some students. The event was held at [insert location] and was attended by a small group of students and faculty members. During the inauguration, Deepa Mam shared
+                        her vision for the IEEE SSIT Club and highlighted the importance of such initiatives in promoting technical education and research. She also encouraged the students to actively participate in the activities of the club and make
+                        the most of the opportunities provided..</p>
+                    <p class="mb-6 ">The students expressed their enthusiasm and interest in the club and shared their ideas and suggestions for future events and initiatives. The inauguration was followed by a brief interactive session, where the students had the opportunity
+                        to interact with Deepa Mam and discuss their ideas further. Overall, the inauguration of the IEEE SSIT Club was a successful and productive event that marked the beginning of a new chapter in the technical education and research
+                        of the institution..</p>
+                    <a href="# " class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 ">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container mx-auto px-2 pt-4 pb-12 ">
+            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 " id="aboutus ">Our Team</h1>
+            <div class="w-full mb-4 ">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t "></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                        <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                            <img src="member1.jpg " alt="Member 1 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">John Doe</div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">Founder</p>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                        <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                            <img src="member2.jpg " alt="Member 2 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Jane Smith</div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">Co-Founder</p>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from co-founder. "</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                        <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                            <img src="member3.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Bob Johnson</div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">CEO</p>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+        <div class="flex flex-wrap ">
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="member1.jpg " alt="Member 1 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">John Doe</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Founder</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="member2.jpg " alt="Member 2 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Jane Smith</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Co-Founder</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from co-founder. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="member3.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Bob Johnson</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">CEO</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="flex flex-wrap ">
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="./images/Sanskruti.jpg " alt="Member 1 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">EMMA WATSON</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">MINISTRY OF WITCHCRAFT</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"REGARDIUM LEVIOUSA. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="./images/Akshay.jpeg " alt="Member 2 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 "></div>Robert pattinson
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Co-Founder</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"I AM BATMAN. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="./images/Divyansh.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">peter parker</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">CEO</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+
+
+
+        <div class="flex flex-wrap ">
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="./images/Aayush.jpg " alt="Member 1 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">John Doe</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Founder</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="member2.jpg " alt="Member 2 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Jane Smith</div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Co-Founder</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from co-founder. "</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
+                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
+                        <img src="member3.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
+                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">tyler durden </div>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">CEO</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div id="eve " class="container mx-auto align-content-center px-4 ">
+                <h1 id="event " class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">Events</h1>
+
+                <div class="flex flex-wrap gap-4 md:gap-8 ">
+
+                    <div class="w-full md:w-1/2 lg:w-1/3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ">
+                        <img class="w-full h-auto " src="./images/campaign.png " alt="Event 1 ">
+                        <div class="p-4 ">
+                            <div class="font-bold text-xl mb-2 ">Event 1</div>
+                            <div class="text-gray-600 mb-2 ">May 1, 2022</div>
+                            <p class="text-gray-700 leading-snug ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae justo a nunc tempor luctus ut eu quam.</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 lg:w-1/3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ">
+                        <img class="w-full h-auto " src="./images/another.jpeg " alt="Event 2 ">
+                        <div class="p-4 ">
+                            <div class="font-bold text-xl mb-2 ">Event 2</div>
+                            <div class="text-gray-600 mb-2 ">August 15, 2022</div>
+                            <p class="text-gray-700 leading-snug ">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js "></script>
+        <!-- component -->
+        <!-- This is an my foot component -->
+        <footer class="footer-section ">
+            <div class="container ">
+                <div class="footer-cta pt-5 pb-5 ">
+                    <div class="row ">
+                        <div class="col-xl-4 col-md-4 mb-30 ">
+                            <div class="single-cta ">
+                                <i class="fas fa-map-marker-alt "></i>
+                                <div class="cta-text ">
+                                    <h4>Find us</h4>
+                                    <span>1010 Avenue, sw 54321, chandigarh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30 ">
+                            <div class="single-cta ">
+                                <i class="fas fa-phone "></i>
+                                <div class="cta-text ">
+                                    <h4>Call us</h4>
+                                    <span>9876543210 0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30 ">
+                            <div class="single-cta ">
+                                <i class="far fa-envelope-open "></i>
+                                <div class="cta-text ">
+                                    <h4>Mail us</h4>
+                                    <span>mail@info.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5 ">
+                    <div class="row ">
+                        <div class="col-xl-4 col-lg-4 mb-50 ">
+                            <div class="footer-widget ">
+                                <div class="footer-logo ">
+                                    <a href="index.html "><img src="./images/logo_UP.png" class="img-fluid " alt="logo "></a>
+                                </div>
+                                <div class="footer-text ">
+                                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="footer-social-icon ">
+                                    <span>Follow us</span>
+                                    <a href="# "><i class="fab fa-facebook-f facebook-bg "></i></a>
+                                    <a href="# "><i class="fab fa-twitter twitter-bg "></i></a>
+                                    <a href="# "><i class="fab fa-google-plus-g google-bg "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30 ">
+                            <div class="footer-widget ">
+                                <div class="footer-widget-heading ">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="# ">Home</a></li>
+                                    <li><a href="# ">about</a></li>
+                                    <li><a href="# ">services</a></li>
+                                    <li><a href="# ">portfolio</a></li>
+                                    <li><a href="# ">Contact</a></li>
+                                    <li><a href="# ">About us</a></li>
+                                    <li><a href="# ">Our Services</a></li>
+                                    <li><a href="# ">Expert Team</a></li>
+                                    <li><a href="# ">Contact us</a></li>
+                                    <li><a href="# ">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+                            <div class="footer-widget ">
+                                <div class="footer-widget-heading ">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25 ">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form ">
+                                    <form action="# ">
+                                        <input type="text " placeholder="Email Address ">
+                                        <button><i class="fab fa-telegram-plane "></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left ">
+                            <div class="copyright-text ">
+                                <p>Copyright &copy; 2023, All Right Reserved <a href="https://codepen.io/anupkumar92/ ">GOWSHIK RAM R</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right ">
+                            <div class="footer-menu ">
+                                <ul>
+                                    <li><a href="# ">Home</a></li>
+                                    <li><a href="# ">Terms</a></li>
+                                    <li><a href="# ">Privacy</a></li>
+                                    <li><a href="# ">Policy</a></li>
+                                    <li><a href="# ">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
