@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IEEE SSIT</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,7 +18,36 @@
 
     <!-- Background & animion & navbar & title -->
 
-   <header>
+    <a id="button">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        var btn = $('#button');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, '300');
+        });
+    </script>
+
+    <header>
         <nav class="
              flex flex-wrap
              items-center
@@ -108,7 +137,7 @@
         </nav>
     </header>
     -->
-       
+
     <div class="jumbotron">
         <div class="container">
             <div class="main">
@@ -119,6 +148,24 @@
     </div>
 
     <script>
+        $(function() {
+
+            //Scroll event
+            $(window).scroll(function() {
+                var scrolled = $(window).scrollTop();
+                if (scrolled > 200) $('.go-top').fadeIn('slow');
+                if (scrolled < 200) $('.go-top').fadeOut('slow');
+            });
+
+            //Click event
+            $('.go-top').click(function() {
+                $("html, body").animate({
+                    scrollTop: "0"
+                }, 500);
+            });
+
+        });
+
         const button = document.querySelector('#menu-button');
         const menu = document.querySelector('#menu');
 
@@ -190,7 +237,8 @@
 
         const btn = document.getElementById("bt");
         btn.addEventListener("click", rippleEffect);
-    </script>    < <div id="proj" class="flex flex-wrap justify-center">
+    </script>
+    < <div id="proj" class="flex flex-wrap justify-center">
         <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
             <div class="text-center">
                 <p class="text-gray-600 text-lg font-medium mb-2">Projects Completed</p>
@@ -381,6 +429,10 @@
         </section>
 
 
+        <div class="go-top">
+            <p class="go-top-text">Back To Top</p>
+        </div>
+
 
         <div class="flex flex-wrap ">
             <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
@@ -388,7 +440,7 @@
                     <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
                         <img src="https://static.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/daenarys-1920.jpg?w=1200 " alt="Member 1 " class="w-full h-64 object-cover ">
                         <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Daenerys Targaryen
-</div>
+                        </div>
                         <p class="text-gray-800 text-base px-6 mb-5 ">Queen</p>
                         <p class="text-gray-800 text-base px-6 mb-5 ">"Mother of Dragons. "</p>
                     </a>
