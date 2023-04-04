@@ -108,7 +108,34 @@
         </nav>
     </header>
     -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="main">
+                <h1>We are Creative Club</h1>
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="btn-main">Get Started.</a>
+            </div>
+        </div>
+    </div>
+
     <script>
+        $(function() {
+
+            //Scroll event
+            $(window).scroll(function() {
+                var scrolled = $(window).scrollTop();
+                if (scrolled > 200) $('.go-top').fadeIn('slow');
+                if (scrolled < 200) $('.go-top').fadeOut('slow');
+            });
+
+            //Click event
+            $('.go-top').click(function() {
+                $("html, body").animate({
+                    scrollTop: "0"
+                }, 500);
+            });
+
+        });
+
         const button = document.querySelector('#menu-button');
         const menu = document.querySelector('#menu');
 
@@ -180,7 +207,8 @@
 
         const btn = document.getElementById("bt");
         btn.addEventListener("click", rippleEffect);
-    </script>    < <div id="proj" class="flex flex-wrap justify-center">
+       </script>    
+       <div id="proj" class="flex flex-wrap justify-center">
         <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
             <div class="text-center">
                 <p class="text-gray-600 text-lg font-medium mb-2">Projects Completed</p>
