@@ -18,30 +18,115 @@
 
     <!-- Background & animion & navbar & title -->
 
+   <header>
+        <nav class="
+             flex flex-wrap
+             items-center
+             justify-between
+             w-full
+             py-4
+             md:py-0
+             px-4
+             text-lg text-gray-700
+             dark:bg-gray-900
+           ">
+            <div>
+                <a href="#jo">
+                    <a href="#jo" class="flex items-center">
+                        <img src="./images/circle-play-solid.svg" class="h-8 mr-3" alt="Ieee Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FIght Club</span>
+                    </a>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 stroke-width="2"
+                 d="M4 6h16M4 12h16M4 18h16"
+               />
+             </svg>
+
+            <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                <ul class="
+                 pt-4
+                 text-base text-gray-700
+                 md:flex
+                 md:justify-between 
+                 md:pt-0">
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-purple-400 dark:text-white " href="#abo">About</a
+                 >
+               </li>
+               <li>
+                 <a class="md:p-4 py-2 block hover:text-purple-400 dark:text-white" href="#proj"
+                   >Projects</a
+                 >
+               </li>
+               <li>
+                 <a class="md:p-4 py-2 block hover:text-purple-400 dark:text-white" href="#pot"
+                   >Events</a
+                 >
+               </li>
+               <li>
+                 <a class="md:p-4 py-2 block hover:text-purple-400 dark:text-white" href="#foot"
+                   >Contact Us</a
+                 >
+               </li>
+               <li>
+                 <a
+                   class="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
+                   href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+                   >Join us</a
+                 >
+               </li>
+             </ul>
+           </div>
+       </nav>
+     </header>
+     
+    <!-- Background & animion & navbar & title 
     <header id="navbar" style="position: relative;">
         <nav class="navbar-container container">
-            <a href="./images/logo.png" class="home-link">
+            <a href="/" class="home-link">
                 <div class="navbar-logo"></div>
                 IEEE SSIT
             </a>
-            <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
+                        <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-
-            <div id="navbar-menu" class="detached">
-                <ul class="navbar-links">
-                    <li class="navbar-item"><a class="navbar-link" href="#abo">About</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#proj">Projects</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#pot">Events</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#foot">Contact</a></li>
-                </ul>
-            </div>
+                        <div id="navbar-menu" class="detached">
+                            <ul class="navbar-links">
+                                <li class="navbar-item"><a class="navbar-link" href="#abo">About</a></li>
+                                <li class="navbar-item"><a class="navbar-link" href="#proj">Projects</a></li>
+                                <li class="navbar-item"><a class="navbar-link" href="#event ">Events</a></li>
+                                <li class="navbar-item"><a class="navbar-link" href="#foot">Contact</a></li>
+                            </ul>
+                        </div>
         </nav>
     </header>
+    -->
+       
+    <div class="jumbotron">
+        <div class="container">
+            <div class="main">
+                <h1>We are Creative Club</h1>
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="btn-main">Get Started.</a>
+            </div>
+        </div>
+    </div>
 
     <script>
+        const button = document.querySelector('#menu-button');
+        const menu = document.querySelector('#menu');
+
+
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
         const navbar = document.getElementById("navbar");
         const navbarToggle = navbar.querySelector(".navbar-toggle");
 
@@ -105,38 +190,23 @@
 
         const btn = document.getElementById("bt");
         btn.addEventListener("click", rippleEffect);
-    </script>
-    </main>
-    <section class="h-screen bg-cover bg-center " style="background-image: url( './images/ieee-1920x1080-3.jpg'); ">
-        <div class="container mx-auto h-full flex items-center justify-center ">
-            <div class="text-center ">
-
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 ">OUR BRAND NEW CLUB BLAH BALH!!!</h1>
-                <p class="text-lg md:text-xl text-white mb-8 ">Your subheading here WRITE SOMETHING IDK</p>
-
-
-                <!-- <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="ripple-button bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 rounded-full px-6 py-3">
-                    Register Now
-                </a> -->
-
-    </section>
-    < <div id="proj" class="flex flex-wrap justify-center">
+    </script>    < <div id="proj" class="flex flex-wrap justify-center">
         <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
             <div class="text-center">
                 <p class="text-gray-600 text-lg font-medium mb-2">Projects Completed</p>
-                <p class="text-3xl font-bold text-green-500">0</p>
+                <p class="text-3xl font-bold text-green-500">30</p>
             </div>
         </div>
         <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
             <div class="text-center">
                 <p class="text-gray-600 text-lg font-medium mb-2">Projects Doing</p>
-                <p class="text-3xl font-bold text-blue-500">03</p>
+                <p class="text-3xl font-bold text-blue-500">15</p>
             </div>
         </div>
         <div class="flex justify-center items-center bg-gray-100 rounded-md shadow-md m-2 w-64 h-64 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
             <div class="text-center">
                 <p class="text-gray-600 text-lg font-medium mb-2">Projects Funded</p>
-                <p class="text-3xl font-bold text-yellow-500">0</p>
+                <p class="text-3xl font-bold text-yellow-500">50</p>
             </div>
         </div>
         </div>
@@ -148,19 +218,20 @@
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">PROJECT LIFI</div>
                         <p class="text-gray-700 text-base">
-                            Li-Fi stands for Light Fidelity. It is a VLC [Visible Light Communication] device, based on the principle of IoT[Internet of Things].Which majorly compromises of Data transmitters and Data receivers.                       </p>
-                    </div>
-                </div>
-                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
-                    <img class="w-full h-64 object-cover" src="./images/sugercane-juice.JPG" alt="Project 2">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">Project 2</div>
-                        <p class="text-gray-700 text-base">
-                            In this project we have extracted juice from the sugercane using solar energy in the place of traditional chemical and mechanical energy.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
                 </div>
-                <!-- <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+                    <img class="w-full h-64 object-cover" src="project2.jpg" alt="Project 2">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Project 2</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
                     <img class="w-full h-64 object-cover" src="project3.jpg" alt="Project 3">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">Project 3</div>
@@ -169,7 +240,7 @@
                         </p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="container mx-auto px-4 lg:px-8 py-12" id="abo">
             <div class="flex flex-col lg:flex-row items-center">
@@ -184,26 +255,18 @@
                     <p class="mb-6 ">The students expressed their enthusiasm and interest in the club and shared their ideas and suggestions for future events and initiatives. The inauguration was followed by a brief interactive session, where the students had the opportunity
                         to interact with Deepa Mam and discuss their ideas further. Overall, the inauguration of the IEEE SSIT Club was a successful and productive event that marked the beginning of a new chapter in the technical education and research
                         of the institution..</p>
-                    <a href="https://www.srmist.edu.in/events/ieee-srmist-society-on-social-implication-of-technology-student-branch-chapter/ " class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 ">Learn More</a>
+                    <a href="https://www.srmist.edu.in/events/ieee-srmist-society-on-social-implication-of-technology-student-branch-chapter/" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 ">Learn More</a>
                 </div>
             </div>
         </div>
 
-
-
-
-        <div class="container mx-auto px-2 pt-4 pb-12 ">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 " id="aboutus ">Our Team</h1>
-            <div class="w-full mb-4 ">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t "></div>
-            </div>
             <div class="flex flex-wrap ">
                 <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
                     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
                         <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                            <img src="./images/T.deepa1.jpg" alt="Member 1 " class="w-full h-64 object-cover ">
-                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Dr. Deepa T</div>
-                            <p class="text-gray-800 text-base px-6 mb-5 ">Faculty Advisor</p>
+                            <img src="./images/Taniska.jpg" alt="Member 1 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Tanishka Maheswari</div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">General Secetary</p>
                             <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
                         </a>
                     </div>
@@ -211,9 +274,9 @@
                 <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
                     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
                         <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                            <img src="./images/suryansh.jpg" alt="Member 2 " class="w-full h-64 object-cover ">
-                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Suryansh Sharma</div>
-                            <p class="text-gray-800 text-base px-6 mb-5 ">Chairperson</p>
+                            <img src="./images/Akshay1.jpeg " alt="Member 2 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Akshay Panigrahi</div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">Co-General Secetary</p>
                             <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from co-founder. "</p>
                         </a>
                     </div>
@@ -221,51 +284,14 @@
                 <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
                     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
                         <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                            <img src="./images/Somak.jpg" alt="Member 3 " class="w-full h-64 object-cover ">
-                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Somak Gowshami</div>
-                            <p class="text-gray-800 text-base px-6 mb-5 ">Vice-Chairperson</p>
+                            <img src="./images/Divyansh1.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
+                            <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Divyansh Singhal </div>
+                            <p class="text-gray-800 text-base px-6 mb-5 ">Research and Development Chairperson</p>
                             <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-        </section>
-
-
-
-        <div class="flex flex-wrap ">
-            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
-                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                        <img src="./images/Taniska.jpg" alt="Member 1 " class="w-full h-64 object-cover ">
-                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Tanishka Maheswari</div>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">General Secetary</p>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
-                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                        <img src="./images/Akshay1.jpeg " alt="Member 2 " class="w-full h-64 object-cover ">
-                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Akshay Panigrahi</div>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">Co-General Secetary</p>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from co-founder. "</p>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg ">
-                    <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
-                        <img src="./images/Divyansh1.jpg " alt="Member 3 " class="w-full h-64 object-cover ">
-                        <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Divyansh Singhal </div>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">Research and Development Chairperson</p>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from CEO. "</p>
-                    </a>
-                </div>
-            </div>
-        </div>
         </div>
         <div class="flex flex-wrap ">
             <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
@@ -322,7 +348,7 @@
                     <a href="# " class="flex flex-wrap no-underline hover:no-underline ">
                         <img src="./images/prasun1.jpg " alt="Member 1 " class="w-full h-64 object-cover ">
                         <div class="w-full font-bold text-xl text-gray-800 px-6 mt-4 ">Prasoon Aghinotri</div>
-                        <p class="text-gray-800 text-base px-6 mb-5 ">Aditorial Advisor</p>
+                        <p class="text-gray-800 text-base px-6 mb-5 ">Editorial Advisor</p>
                         <p class="text-gray-800 text-base px-6 mb-5 ">"Quote from founder. "</p>
                     </a>
                 </div>
@@ -377,29 +403,27 @@
             </div>
         </div>
 
-        <section id="pot">
+        <section>
             <div class="container mx-auto align-content-center px-4 ">
-                <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">Events</h1>
+                <h1 id="pot" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">Events</h1>
 
                 <div class="flex flex-wrap gap-4 md:gap-8 ">
 
                     <div class="w-full md:w-1/2 lg:w-1/3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ">
-                        <img class="w-full h-auto " src="./images/market.JPG " alt="Event 1 ">
-                        <div class="p-4 " id="eve">
+                        <img class="w-full h-auto " src="./images/campaign.png " alt="Event 1 ">
+                        <div class="p-4 ">
                             <div class="font-bold text-xl mb-2 ">Event 1</div>
-                            <div class="text-gray-600 mb-2 ">August 10, 2022</div>
-                            <p class="text-gray-700 leading-snug ">
-                                On 10th March 2023, a Rural Women Entrepreneur Meet was organized by SSIT (Society of Social Implication of Technology) at SRMIST. The event aimed to create a platform for rural women entrepreneurs to come together, share their experiences, and discuss challenges and opportunities in their businesses. The event was attended by rural women entrepreneurs from different parts of the district. The attendees were from various fields such as agriculture, handicrafts, textiles, food processing, and many more. The participants were from different age groups and backgrounds, which made the event more diverse and enriching.
-                            </p>
+                            <div class="text-gray-600 mb-2 ">May 1, 2022</div>
+                            <p class="text-gray-700 leading-snug ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae justo a nunc tempor luctus ut eu quam.</p>
                         </div>
                     </div>
 
                     <div class="w-full md:w-1/2 lg:w-1/3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ">
                         <img class="w-full h-auto " src="./images/another.jpeg " alt="Event 2 ">
                         <div class="p-4 ">
-                            <div class="font-bold text-xl mb-2 ">Event 1.2</div>
-                            <div class="text-gray-600 mb-2 ">August 10, 2022</div>
-                            <p class="text-gray-700 leading-snug ">The Women Entrepreneur Meet was a great success as it provided a platform for rural women entrepreneurs to come together, share their experiences, and learn from each other. The event was a step towards empowering rural women through entrepreneurship and creating a more inclusive and equitable society.</p>
+                            <div class="font-bold text-xl mb-2 ">Event 2</div>
+                            <div class="text-gray-600 mb-2 ">August 15, 2022</div>
+                            <p class="text-gray-700 leading-snug ">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                         </div>
                     </div>
 
